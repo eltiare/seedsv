@@ -5,7 +5,7 @@ module Seedsv
     mattr_accessor :csv_class
   
     #Use appropriate ruby library
-    if VERSION.include?('1.9')
+    if VERSION.include?('1.9') || VERSION.index(/^2/)
       require 'csv'
       @@csv_class = CSV
     else
